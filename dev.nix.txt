@@ -1,0 +1,110 @@
+{ pkgs, ... }:
+{
+  # You can pin your packages to a specific version.
+  # channel = "unstable"; # or "stable", "beta", etc.
+
+  # Use \`extensions\` to add extensions to your workspace.
+  # extensions = [
+  #   "ms-python.python"
+  # ];
+
+  # Use \`basePackages\` to add static packages to your workspace.
+  basePackages = [
+    pkgs.nodejs
+  ];
+
+  # A list of paths to files that should be readable by everyone.
+  # Everyone gets read access to all files in your workspace, except for
+  # paths listed under \`dev-only\` in \`.idx/config.json\`.
+  # shared = [
+  #   "."
+  # ];
+
+  # A list of paths to files that should be private.
+  # Private paths are only visible to people who have been explicitly granted
+  # access to them.
+  # private = [
+  #   "secrets.txt"
+  # ];
+
+  # A list of relative paths to directories that should be included in the
+  # Nix build. You should specify this if you want to run a command in a
+  # subdirectory of your workspace that contains a \`dev.nix\` file.
+  # includes = [
+  #   "wordpress-cms-project"
+  # ];
+
+  #
+  # Below are some example configurations that you can use.
+  #
+
+  # --- Python ---
+  #
+  # {
+  #   # You can install python packages with pip.
+  #   #
+  #   # pkgs.python.withPackages (ps: [
+  #   #   ps.numpy
+  #   # ])
+  #
+  #   # Or with poetry:
+  #   #
+  #   # pkgs.poetry
+  # }
+  #
+  # --- Node.js ---
+  #
+  # {
+  #   # You can install a specific version of nodejs.
+  #   #
+  #   # pkgs.nodejs_20
+  #
+  #   # You can install node packages either with nix...
+  #   #
+  #   # pkgs.nodePackages.bash-language-server
+  #
+  #   # ...or with npm/pnpm/yarn.
+  # }
+  #
+  # --- Go ---
+  #
+  # {
+  #   # You can install a specific version of go.
+  #   #
+  #   # pkgs.go_1_20
+  #
+  #   # You can install go packages either with nix...
+  #   #
+  #   # pkgs.gopls
+  #
+  #   # ...or with go get.
+  # }
+  #
+  # --- Rust ---
+  #
+  # {
+  #   # You can install a specific version of rust.
+  #   #
+  #   # pkgs.rustup
+  #
+  #   # You can install rust packages either with nix...
+  #   #
+  #   # pkgs.rust-analyzer
+  #
+  #   # ...or with cargo.
+  # }
+  #
+  # --- Java ---
+  #
+  # {
+  #   # You can install a specific version of java.
+  #   #
+  #   # pkgs.jdk17
+  #
+  #   # You can install java packages either with nix...
+  #   #
+  #   # pkgs.maven
+  #
+  #   # ...or with gradle.
+  # }
+}
